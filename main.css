@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bmi-color1: #193263;
+    --bmi-color2: #3D54A1;
+    --bmi-color3: #B5BDDB;
+    --bmi-color4: #DB353A;
+    --bmi-color5: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--bmi-color3);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bmi-color1);
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: var(--bmi-color5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header .top-navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.header .header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.header .header-logo img{
+    width: 100%;
+    object-fit: contain;
+    max-width: 350px;
+}
+
+.header .top-navbar-right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header .top-navbar-right .tnr-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.header .top-navbar-right .tnr-top .social-icons{
+    border-right: 1px solid var(--bmi-color1);
+}
+
+.header .top-navbar-right .tnr-top .social-icons a{
+    color: var(--bmi-color1);
+}
+
+
+.row{
+    width: 100%;
+}
+
+
