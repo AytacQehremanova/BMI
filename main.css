@@ -77,6 +77,12 @@ button{
     max-width: 350px;
 }
 
+@media only screen and (max-width:992px){
+    .header .header-logo img{
+        max-width: 200px;
+    }
+}
+
 .header .top-navbar-right{
     display: flex;
     align-items: flex-end;
@@ -108,14 +114,85 @@ button{
     margin-right: 10px;
 }
 
-.header .top-navbar-right .tnr-top .social-icons{
+.header .top-navbar-right .tnr-top .social-icons,
+.header .top-navbar-right .tnr-top .contact{
     border-right: 1px solid var(--bmi-color1);
+}
+
+.header .top-navbar-right .tnr-top .contact:last-child{
+    border-right: none;
 }
 
 .header .top-navbar-right .tnr-top .social-icons a{
     color: var(--bmi-color1);
 }
 
+.header .top-navbar-right .tnr-top .contact{
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.header .top-navbar-right .tnr-top .contact a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header .top-navbar-right .tnr-top .contact span:first-child{
+    color: var(--bmi-color1);
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+.header .top-navbar-right .tnr-top .contact span:last-child{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.header .top-navbar-right .tnr-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+
+.header .top-navbar-right .tnr-bottom .lang-dropdown{
+    margin-right: 15px;
+}
+
+.header .top-navbar-right .tnr-bottom .dropdown span{
+    color: var(--bmi-color1);
+    padding: 0 5px;
+    font-weight: 600;
+    font-size: 20px;
+} 
+
+.search{
+    position: relative;
+    min-width: 300px;
+}
+
+.search input{
+    width: 100%;
+    background-color: #ECEEF6;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    outline: none;
+}
+
+.search button{
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
 
 .row{
     width: 100%;
