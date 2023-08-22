@@ -36,6 +36,7 @@
                 <img src="bmi-image/logo/2x/verticalbig.png" alt="logo" />
               </a>
             </div>
+
             <div class="top-navbar-right d-none d-lg-flex">
               <div class="tnr-top">
                 <div class="social-icons">
@@ -97,18 +98,9 @@
                 </div>
               </div>
             </div>
-            <button
-              class="search-button d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasTop"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
 
             <div class="offcanvas offcanvas-top" id="offcanvasTop">
-              <div class="offcanvas-header">
-              </div>
+              <div class="offcanvas-header"></div>
               <div class="offcanvas-body">
                 <div class="container">
                   <div class="row">
@@ -138,14 +130,25 @@
               </div>
             </div>
 
-            <button
-              class="offcanvas-button d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight"
-            >
-              <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="mobile-buttons d-lg-none">
+              <button
+                class="search-button d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+
+              <button
+                class="offcanvas-button d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
 
             <div class="offcanvas offcanvas-end" id="offcanvasRight">
               <div class="offcanvas-header">
@@ -230,6 +233,56 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <section class="banner">
+        <div class="swiper banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="bmi-image/banner-swiper/img-1.png" alt="banner" />
+            </div>
+            <div class="swiper-slide">
+              <img src="bmi-image/banner-swiper/img-2.png" alt="banner" />
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="content-left">
+                <h1>
+                  BUSINESS
+                  <br />
+                  MANAGEMENT
+                  <br />
+                  INSTITUTE
+                </h1>
+                <a href="#" class="banner-button">Ətraflı</a>
+              </div>
+                <div class="content-right">
+                <div class="video-wrapper">
+                  <div class="video-poster">
+                    <img
+                      src="bmi-image/banner-swiper/video-poster.png"
+                      alt="video-poster"
+                    />
+                  
+                  <div class="hover">
+                    <a
+                      data-src="bmi-image/banner-swiper/video-poster.png"
+                      data-fancybox="play" class="play-button"
+                    >
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
