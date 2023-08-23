@@ -254,6 +254,7 @@ button{
     background-color: var(--bmi-color1);
 }
 
+
 .offcanvas-button{
     color: var(--bmi-color1);
     font-size: 25px;
@@ -454,17 +455,25 @@ section{
 
 section.banner{
     position: relative;
+    min-height: 80vh; 
+}
+
+@media only screen and (min-width: 992px){
+    section.banner{
+        min-height: 60vh;
+    }
 }
 
 section.banner .banner-swiper{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: -1;
+    height: 100%;
+    z-index: 1;
 }
 
 .swiper-slide{
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -481,7 +490,12 @@ section.banner .content{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 485px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 section .container{
@@ -526,6 +540,12 @@ section.banner .content-wrapper .content-left h1{
     text-align: start;
 }
 
+@media only screen and (max-width:768px){
+    section.banner .content-wrapper .content-left h1{
+        text-align: center;
+    }
+}
+
 section.banner .content-wrapper .content-left .banner-button{
     display: flex;
     align-items: center;
@@ -552,23 +572,35 @@ section.banner .content-wrapper .content-right{
     align-items: center;
 }
 
-section.banner .content-wrapper .content-right .video-wrapper{
+.video-wrapper{
     position: relative;
 }
 
-section.banner .content-wrapper .content-right .video-poster{
+.video-poster{
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     width: 100%;
+    max-width: 400px;
 }
 
-section.banner .content-wrapper .content-right .video-poster img{
+section.why-us .video-poster{
+    min-width: 600px;
+}
+
+@media only screen and (max-width:768px){
+    section.why-us .video-poster{
+        min-width: 300px;
+    }
+}
+
+.video-poster img{
     border-radius: 5px;
+    width: 100%;
 }
 
-section.banner .content-wrapper .content-right .hover{
+.hover{
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
@@ -581,7 +613,7 @@ section.banner .content-wrapper .content-right .hover{
     justify-content: center;
 }
 
-section.banner .content-wrapper .content-right .play-button{
+.play-button{
     width: 55px;
     height: 55px;
     cursor: pointer;
@@ -592,7 +624,180 @@ section.banner .content-wrapper .content-right .play-button{
     border: 2px solid var(--bmi-color5);
 }
 
-section.banner .content-wrapper .content-right .play-button i{
+.play-button i{
     font-size: 18px;
     color: var(--bmi-color5);
+}
+
+section.counter .counters-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width:576px){
+    section.counter .counters-wrapper{
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    section.counter .counters-wrapper{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+section.counter .counters-wrapper .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+@media only screen and (min-width:576px){
+    section.counter .counters-wrapper .item{
+        min-width: 220px;
+        max-width: 240px;
+    }
+}
+
+section.counter .counters-wrapper .item .image{
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.counter .counters-wrapper .item .name{
+    padding: 15px 0;
+}
+
+section.counter .counters-wrapper .item .name p{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+section.counter .counters-wrapper .item .counter-span{
+    color: var(--bmi-color1);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+section.why-us .row .content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.why-us .row h1{
+    border-left: 5px solid var(--bmi-color1);
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+section.why-us .small-images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+@media only screen and (min-width:768px){
+    section.why-us .small-images{
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    section.why-us .small-images{
+        justify-content: flex-start;
+    }
+}
+
+section.why-us .small-images .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+section.why-us .small-images .item img{
+    object-fit: contain;
+    margin-right: 10px;
+    width: 80px;
+    height: 50px;
+}
+
+section.why-us .small-images .item .label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section.why-us .small-images .item .label span{
+    font-weight: 500;
+    padding: 5px;
+}
+
+.col-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.trainings{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.trainings .section-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+section.trainings .blue-line{
+    background-color: var(--bmi-color1);
+    width: 40px;
+    height: 4px;
+}
+
+@media only screen and (min-width:768px){
+    section.trainings .blue-line{
+        width: 70px;
+    }
+}
+
+section.trainings span{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    text-align: center;
+    padding: 0 10px;
 }
