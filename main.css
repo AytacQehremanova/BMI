@@ -48,7 +48,6 @@ button{
 }
 
 .header{
-    width: 100%;
     background-color: var(--bmi-color5);
     display: flex;
     align-items: center;
@@ -471,9 +470,9 @@ section.banner .banner-swiper{
     width: 100%;
     height: 100%;
     z-index: 1;
-}
+} 
 
-.swiper{
+.swiper {
     width: 100%;
 }
 
@@ -781,15 +780,21 @@ section .section-header{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 400px;
+    max-width: 800px;
     margin-bottom: 15px;
-    padding: 15px;
+    padding: 10px;
 }
 
 section .blue-line{
     background-color: var(--bmi-color1);
-    width: 60%;
+    width: 40px;
     height: 4px;
+}
+
+@media only screen and (min-width:768px) {
+    section .blue-line{
+        width: 70px;
+    }
 }
 
 .section-header span{
@@ -924,19 +929,163 @@ section.trainers .trainer-card:hover .trainer-info{
 section.trainers .trainer-card .hide-icon{
     display: flex;
     position: absolute;
-    top: 80px;
+    top: 120px;
+    right: 50px;
     animation: linear alternate;
     animation-name: move;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
-  
-  @-webkit-keyframes move {
-      0% {
-        left: 0;
-        transform: translateX(-100%);
-      }
-      100% {
-        left: 100%;
+
+
+  @keyframes move {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
         transform: translateX(0);
-      }
+    }
   }
+
+
+section.events .row .col-12{
+    margin-bottom: 25px;
+}
+.col-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.events .events-card{
+    width: 100%;
+    position: relative;
+    max-width: 380px;
+    min-height: 200px;
+    max-height: 330px;
+}
+
+section.events .events-card .poster{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    min-height: 200px;
+}
+
+section.events .events-card .hover-div{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.events .events-card .events-button{
+    color: var(--bmi-color5);
+    border: 1px solid var(--bmi-color5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 150px;
+    opacity: 0;
+}
+
+
+section.events .events-card .logo{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    object-fit: contain;
+    transform: translateX(-50%);
+}
+
+section.events .events-card:hover .events-button{
+    opacity: 1;
+    animation: linear alternate;
+    animation-name: eventbtn;
+    animation-duration: 0.2s;
+}
+
+@keyframes eventbtn {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section.news .news-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.news .news-card:hover{
+    box-shadow: 0 0 5px var(--bmi-color1);
+    transition: all .3s;
+}
+
+section.news .news-card .image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.news .news-card .image img{
+    width: 100%;
+    min-height: 200px;
+    max-height: 270px;
+    object-fit: cover;
+}
+
+section.news .news-card .content{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.news .news-card .content span{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+section.news .news-card .news-button{
+    color: var(--bmi-color1);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    border: 2px solid var(--bmi-color1);
+    min-width: 160px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.news .news-card .news-button:hover{
+    background-color: var(--bmi-color1);
+    color: var(--bmi-color5);
+    transition: all .2s;
+}
