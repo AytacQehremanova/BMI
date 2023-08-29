@@ -33,6 +33,24 @@ body{
     background: var(--bmi-color1);
 }
 
+.page-scroll-button{
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bmi-color1);
+    color: var(--bmi-color5);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--bmi-color5);
+    font-size: 20px;
+}
+
 a{
     text-decoration: none;
 }
@@ -1088,4 +1106,204 @@ section.news .news-card .news-button:hover{
     background-color: var(--bmi-color1);
     color: var(--bmi-color5);
     transition: all .2s;
+}
+
+section.gallery .gallery-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width:576px) {
+    section.gallery .gallery-buttons{
+        flex-direction: row;
+    }
+}
+
+section.gallery .gallery-buttons button{
+    color: var(--bmi-color1);
+    border: 2px solid var(--bmi-color1);
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 250px;
+    min-width: 150px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin: 8px;
+}
+
+section.gallery .gallery-buttons button.active{
+    background-color: var(--bmi-color1);
+    color: var(--bmi-color5);
+}
+
+section.gallery .gallery-wrapper.active{
+    display: flex;
+}
+
+section.gallery .gallery-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+section.gallery .foto-row{
+    width: 100%;
+}
+
+section.gallery .foto-row .col-12{
+    padding: 0;
+}
+
+section.gallery .foto-row .image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    max-height: 330px;
+}
+
+section.gallery .foto-row .image img{
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    max-height: 330px;
+    object-fit: cover;
+}
+
+section.gallery .foto-row .image .hover-div{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.gallery .image .foto-button{
+    color: var(--bmi-color5);
+    border: 2px solid var(--bmi-color5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 150px;
+    opacity: 0;
+}
+
+section.gallery .image:hover .foto-button{
+    opacity: 1;
+    animation: linear alternate;
+    animation-name: gallerybtn;
+    animation-duration: 0.2s;
+}
+
+@keyframes gallerybtn {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section.gallery .video-row{
+    width: 100%;
+}
+
+section.gallery .video-row .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+section.gallery .video-row .item{
+    width: 100%;
+    position: relative;
+    max-width: 350px;
+    min-height: 200px;
+}
+
+section.gallery .video-row .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 200px;
+    max-height: 330px;
+}
+
+
+section.gallery .video-row .item .hover-div{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.gallery .play-button{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--bmi-color5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.clients .swiper-slide img{
+    width: 170px;
+    height: 150px;
+    object-fit: contain;
+}
+
+section.partners .partners-container{
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 20px 0;
+}
+
+section.partners .swiper-slide img{
+    width: 120px;
+    height: 70px;
+    object-fit: contain;
+}
+
+section.partners .swiper-button-next,
+section.partners .swiper-button-prev{
+    border-radius: 50%;
+    background: #ECEEF6;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section.partners .swiper-button-next::after,
+section.partners .swiper-button-prev::after{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
 }

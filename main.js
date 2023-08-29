@@ -56,6 +56,21 @@ window.addEventListener("scroll", function () {
 
 
 
+let scrollButton = document.querySelector(".page-scroll-button");
+window.addEventListener("scroll", function () {
+  if (this.scrollY > 300) {
+    scrollButton.classList.remove("d-none");
+  } else {
+    scrollButton.classList.add("d-none");
+  }
+});
+
+scrollButton.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
+
+
 let shareButton = document.querySelectorAll(".share-button");
 let hideIcon = document.querySelectorAll(".hide-icon");
 
@@ -64,3 +79,37 @@ shareButton.forEach((btn, index) => {
     hideIcon[index].classList.toggle('d-none');
   })
 })
+
+
+Fancybox.bind('[data-fancybox="gallery-foto"]', {});
+Fancybox.bind('[data-fancybox="gallery-video"]', {});
+
+
+
+if (document.querySelector(".gallery-wrapper")) {
+  let galleryButtons = document.querySelectorAll(".gallery-buttons button");
+  let galleryWrapper = document.querySelectorAll(".gallery-wrapper");
+
+  galleryButtons[0].classList.add("active");
+  galleryWrapper[0].classList.remove("d-none");
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let category = button.getAttribute("data-category");
+      for (let i = 0; i < galleryButtons.length; i++) {
+        galleryButtons[i].classList.remove("active");
+      }
+      button.classList.add("active");
+
+      for (let i = 0; i < galleryWrapper.length; i++) {
+        galleryWrapper[i].classList.add("d-none");
+      }
+      let activeContainer = Array.from(galleryWrapper).find(
+        (container) => container.getAttribute("data-category") === category
+      );
+      activeContainer.classList.remove("d-none");
+    });
+  });
+}
+
+
