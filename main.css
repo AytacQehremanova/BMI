@@ -65,7 +65,7 @@ button{
     outline: 0;
 }
 
-.header{
+header .header{
     background-color: var(--bmi-color5);
     display: flex;
     align-items: center;
@@ -1303,6 +1303,291 @@ section.partners .swiper-button-prev{
 
 section.partners .swiper-button-next::after,
 section.partners .swiper-button-prev::after{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+section.tainings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.trainings .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section.trainings .trainings-wrapper{
+    background-color: var(--bmi-color1);
+    padding: 30px 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 100%;
+}
+
+section.trainings .trainings-wrapper .item{
+    width: 100%;
+    max-width: 300px;
+}
+
+section.trainings .trainings-card{
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+section.trainings .trainings-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.trainings .trainings-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+section.trainings .black-hover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+section.trainings .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 12px;
+}
+
+section.trainings .content .header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section.trainings .content .badge{
+    background-color: var(--bmi-color4);
+    border-radius: 5px;
+    padding: 8px 13px;
+    padding-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+section.trainings .badge img{
+    margin-right: 7px;
+}
+
+section.trainings .content .name{
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--bmi-color5);
+}
+
+section.trainings .content .name::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--bmi-color4);
+    width: 70px;
+    height: 4px;
+}
+
+section.trainings .content .type{
+    font-weight: 600;
+    color: var(--bmi-color5);
+    margin-top: 25px;
+}
+
+section.trainings .content .footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.trainings .content .footer button.details{
+    background-color: var(--bmi-color1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+section.trainings .content .footer button{
+    width: 100%;
+    min-width: 80px;
+    padding: 10px;
+    font-weight: 500;
+    color: var(--bmi-color5);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.trainings .content .footer button.register{
+    background-color: transparent;
+    border-color: var(--bmi-color5);
+}
+
+section.trainings .training-card{
+    display: flex;
+    flex-direction: column;
+}
+
+section.trainings .trainings-card.offline .badge{
+    background-color: var(--bmi-color1);
+}
+
+section.trainings .trainings-card.offline .badge .online-icon,
+section.trainings .trainings-card.offline .badge .online-span{
+    display: none;
+}
+
+section.trainings .trainings-card .badge .offline-icon,
+section.trainings .trainings-card .badge .offline-span{
+    display: none;
+}
+
+section.trainings .trainings-card.offline .badge .online-icon,
+section.trainings .trainings-card.offline .badge .online-span{
+    display: none;
+}
+
+section.trainings .trainings-card.offline .badge .offline-icon,
+section.trainings .trainings-card.offline .badge .offline-span{
+    display: inline-block;
+}
+
+section.trainings .trainings-card.offline .name::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--bmi-color1);
+    width: 70px;
+    height: 4px;
+}
+
+section.trainings .training-card{
+    width: 100%;
+    max-width: 900px;
+}
+
+.col-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section.trainings .training-card .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 25px
+}
+
+
+section.trainings .training-card .image img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    section.trainings .training-card .image img {
+        max-height: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+section.trainings .content .swiper-slide .header{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bmi-color5);
+    text-align: center;
+    position: relative;
+}
+
+section.trainings .content .swiper-slide .header::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    bottom: -10px;
+    background-color: var(--bmi-color5);
+}
+
+section.trainings .content .training-name{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--bmi-color5);
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+section.trainings .training-text{
+    color: var(--bmi-color5);
+    text-align: start;
+    margin-bottom: 25px;
+}
+
+section.trainings .swiper-button-next,
+section.trainings .swiper-button-prev{
+    border-radius: 50%;
+    background: #ECEEF6;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section.trainings .swiper-button-next::after,
+section.trainings .swiper-button-prev::after{
     color: #000;
     font-size: 14px;
     font-weight: 600;

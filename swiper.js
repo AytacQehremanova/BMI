@@ -112,3 +112,23 @@ const bannerSwiper = new Swiper(".banner-swiper", {
       nextEl: ".swiper-button-next",
     },
   });
+
+
+  
+
+  const trainingsSwiper = new Swiper(".trainings-swiper", {
+    slidesPerView: 1,
+    
+    // loop: true,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  });
