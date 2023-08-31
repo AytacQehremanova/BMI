@@ -1592,3 +1592,153 @@ section.trainings .swiper-button-prev::after{
     font-size: 14px;
     font-weight: 600;
 }
+
+section.appeal{
+    background-color: #ECEEF6;
+    padding: 30px 0;
+    margin-bottom: 0;
+}
+
+section.appeal .form-general{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.appeal .form-general .form-item{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+section.appeal .form-general label{
+    padding: 5px 8px;
+}
+
+section.appeal .form-general .form-select{
+    box-shadow: none;
+    border: 1px solid #ced4da;
+    font-weight: 500;
+    color: #202F3F;
+    padding: 12px;
+}
+
+.form-control{
+    box-shadow: none!important;
+    font-weight: 500;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    caret-color: var(--bmi-color1);
+    color: #3D54A1;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 2px var(--bmi-color1)!important;
+}
+
+
+section.appeal .form-button{
+    background-color: var(--bmi-color1);
+    color: var(--bmi-color5);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px 5px;
+    margin: 15px 0;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+footer{
+    background-color: #202F3F;
+}
+
+footer .footer-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+@media only screen and (min-width:992px){
+    footer .footer-top{
+        flex-direction: row;
+    }
+}
+
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+footer .footer-logo .footer-image{
+    width: 100%;
+    object-fit: contain;
+}
+
+footer .w-100{
+    width: 100%!important;
+}
+
+
+footer .footer-links{
+    display: flex;
+    flex-direction: column ;
+    align-items: center; 
+}
+
+@media only screen and (min-width:992px) {
+    footer .footer-links{
+        align-items: start;
+    }
+}
+
+footer .footer-links h4{
+    color: var(--bmi-color5);
+    font-weight: 700;
+}
+
+footer .footer-links a{
+    color: var(--bmi-color5);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+} 
+
+footer .contact{
+    padding: 10px 0;
+}
+
+footer .contact a span :first-child{
+    padding: 0 7px;
+}
+
+footer .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .col-12{
+    margin-top: 25px;
+}
+
+footer .footer-bottom{
+    background-color: var(--bmi-color1);
+    color: var(--bmi-color5);
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 10px;
+}
