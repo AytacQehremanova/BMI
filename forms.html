@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <link rel="icon" href="bmi-image/logo/2x/iconbig.png" />
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <button class="page-scroll-button">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <div class="header">
+        <div class="container">
+          <div class="top-navbar">
+            <div class="top-navbar-left">
+              <a class="header-logo" href="#">
+                <img src="bmi-image/logo/2x/verticalbig.png" alt="logo" />
+              </a>
+            </div>
+
+            <div class="top-navbar-right d-none d-lg-flex">
+              <div class="tnr-top">
+                <div class="social-icons">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+                <div class="contact">
+                  <a href="#">
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>info@gmail.com</span>
+                  </a>
+                </div>
+                <div class="contact">
+                  <a href="#">
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span> +994 50 999 99 99</span>
+                  </a>
+                </div>
+              </div>
+              <div class="tnr-bottom">
+                <div class="lang-dropdown">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-button"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <span>AZ</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="menu-item" href="#">EN</a>
+                      </li>
+                      <li>
+                        <a class="menu-item" href="#">RU</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="search">
+                  <form action="#">
+                    <input type="text" placeholder="Axtar" />
+                    <button>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="offcanvas offcanvas-top" id="offcanvasTop">
+              <div class="offcanvas-header"></div>
+              <div class="offcanvas-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-10 col-center">
+                      <form action="#" class="search-form">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Axtar"
+                        />
+                        <button>
+                          <i class="fa-solid fa-magnifying-glass"> </i>
+                        </button>
+                      </form>
+                    </div>
+                    <div class="col-2 col-end">
+                      <button
+                        type="button"
+                        class="close-button"
+                        data-bs-dismiss="offcanvas"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mobile-buttons d-lg-none">
+              <button
+                class="search-button d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+
+              <button
+                class="offcanvas-button d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <div class="offcanvas offcanvas-end" id="offcanvasRight">
+              <div class="offcanvas-header">
+                <a class="header-logo" href="#">
+                  <img
+                    src="bmi-image/logo/white-logo/vertical.svg"
+                    alt="logo"
+                  />
+                </a>
+                <button type="button" data-bs-dismiss="offcanvas">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="links-wrapper">
+                  <a href="index.html">Ana Səhifə</a>
+                  <a href="about.html">Haqqımızda</a>
+                  <a href="trainings.html">Təlimlər</a>
+                  <a href="trainers.html">Təlimçilər</a>
+                  <a class="active" href="#">Forumlar</a>
+                  <a href="contact.html">Xəbərlər</a>
+                  <a href="contact.html">Bizim Əlaqə</a>
+
+                  <a
+                    class="collapsed"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                  >
+                    Az
+                  </a>
+
+                  <div class="collapse" id="collapseExample">
+                    <div class="links-wrapper">
+                      <a href=""> En </a>
+                      <a href=""> Ru </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-icons">
+                  <a href="#">
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>info@gmail.com</span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span> +994 50 999 99 99</span>
+                  </a>
+                </div>
+                <div class="social-icons">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-navbar">
+            <div class="container">
+              <div class="d-flex align-items-center">
+                <a class="header-bottom-logo d-none" href="#">
+                  <img src="bmi-image/logo/1x/shortsmall.png" alt="logo" />
+                </a>
+                <div class="links-wrapper">
+                  <a href="index.html">Ana Səhifə</a>
+                  <a href="about.html">Haqqımızda</a>
+                  <a href="trainings.html">Təlimlər</a>
+                  <a href="trainers.html">Təlimçilər</a>
+                  <a class="active" href="#">Forumlar</a>
+                  <a href="news.html">Xəbərlər</a>
+                  <a href="contact.html">Bizim Əlaqə</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="swiper banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="bmi-image/banner-swiper/img-1.png" alt="banner" />
+            </div>
+            <div class="swiper-slide">
+              <img src="bmi-image/banner-swiper/img-2.png" alt="banner" />
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="content-left">
+                <h1>
+                  BUSINESS
+                  <br />
+                  MANAGEMENT
+                  <br />
+                  INSTITUTE
+                </h1>
+                <a href="#" class="banner-button">Ətraflı</a>
+              </div>
+              <div class="content-right">
+                <div class="video-wrapper">
+                  <div class="video-poster">
+                    <img
+                      src="bmi-image/banner-swiper/video-poster.png"
+                      alt="video-poster"
+                    />
+
+                    <div class="hover">
+                      <a
+                        data-src="bmi-image/banner-swiper/video-poster.png"
+                        data-fancybox="play"
+                        class="play-button"
+                      >
+                        <i class="fa-solid fa-play"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-header container">
+        <div class="root-links">
+            <a href="#">Əsas səhifə</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="#">Forumlar</a>
+        </div>
+        <span class="header">FORUMLAR</span>
+      </div>
+
+      <section class="events">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-1.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 1</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-1.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-2.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 2</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-2.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-3.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 3</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-1.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-4.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 4</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-2.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-5.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 5</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-1.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 col-center">
+              <div class="events-card">
+                <img
+                  src="bmi-image/tedbirler/poster/img-6.png"
+                  class="poster"
+                  alt="poster"
+                />
+                <div class="hover-div">
+                  <a href="#" class="events-button">Tədbir 6</a>
+                  <img
+                    src="bmi-image/tedbirler/logo/logo-2.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-logo">
+              <a href="#">
+                <img
+                  src="bmi-image/logo/white-logo/text icon.svg"
+                  class="footer-image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="row w-100">
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="footer-links">
+                  <h4>Menyular</h4>
+                  <a href="#">Haqqımızda</a>
+                  <a href="#">Təlimlər</a>
+                  <a href="#">Təlimçilər</a>
+                  <a href="#">Forumlar</a>
+                  <a href="#">Xəbərlər</a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="footer-links">
+                  <h4>Faydalı linklər</h4>
+                  <a href="#">Tez-tez soruşulanlar</a>
+                  <a href="#">Karyera</a>
+                  <a href="#">Xidmət şəbəkəsi</a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="footer-links">
+                  <h4>Əlaqə</h4>
+                  <div class="contact">
+                    <a href="#">
+                      <span>
+                        <i class="fa-solid fa-envelope"></i>
+                      </span>
+                      <span>info@gmail.com</span>
+                    </a>
+                  </div>
+                  <div class="contact">
+                    <a href="#">
+                      <span>
+                        <i class="fa-solid fa-phone"></i>
+                      </span>
+                      <span> +994 50 999 99 99</span>
+                    </a>
+                  </div>
+                  <div class="social-icons">
+                    <a href="#">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2022. Business Management Institute</p>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script src="swiper.js"></script>
+      <script src="main.js"></script>
+    </body>
+  </html>
+  
