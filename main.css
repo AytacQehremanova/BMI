@@ -38,9 +38,9 @@ body {
   z-index: 9;
   bottom: 0;
   right: 0;
-  margin: 30px;
   height: 40px;
   width: 40px;
+  margin: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,9 +209,9 @@ header .header {
 }
 
 .fa-location-dot:hover{
-  animation: ease infinite;
+  animation: ease;
   animation-name: falocation;
-  animation-duration: 0.5Fs;
+  animation-duration: 0.5s;
 }
 
 @keyframes falocation{
@@ -420,7 +420,7 @@ header .header {
   padding: 10px 13px;
 }
 
-.offcanvas-header i:hover {
+.top-navbar .offcanvas-header i:hover {
   background-color: var(--bmi-color5);
   color: var(--bmi-color1);
   transition: all 0.3s;
@@ -1566,7 +1566,7 @@ section.trainers .trainer-card .hide-icon {
   right: 50px;
   animation: linear alternate;
   animation-name: move;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 }
 
 @keyframes move {
@@ -2556,7 +2556,7 @@ section.contact .contact-form .footer{
   }
 }
 
-section.contact .form-submit-button{
+.form-submit-button{
   color: var(--bmi-color5);
   background-color: var(--bmi-color1);
   font-size: 18px;
@@ -2567,7 +2567,7 @@ section.contact .form-submit-button{
   min-width: 250px;
 }
 
-section.contact .form-submit-button:hover{
+.form-submit-button:hover{
   background-color: var(--bmi-color2);
   animation: ease infinite;
   animation-name: fsbtn;
@@ -2692,7 +2692,8 @@ section.contact .map iframe{
   }
 }
 
-#appeal-offcanvas{
+#appeal-offcanvas,
+#course-offcanvas{
   background-color: var(--bmi-color5);
 }
 
@@ -2703,21 +2704,18 @@ section.contact .map iframe{
 
 #appeal-offcanvas .close-button{
   border-color: var(--bmi-color4);
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
+}
+
+#appeal-offcanvas .close-button i{
+  color: var(--bmi-color4);
 }
 
 #appeal-offcanvas .close-button:hover{
   background-color: var(--bmi-color4);
 }
 
-/* #appeal-offcanvas .close-button:hover i{
+#appeal-offcanvas .close-button:hover i{
   color: var(--bmi-color5);
-} */
-
-#appeal-offcanvas .close-button i{
-  color: var(--bmi-color4);
 }
 
 .form-general .form-item{
@@ -2750,4 +2748,85 @@ section.contact .map iframe{
 
 .form-select option:focus{
   border: var(--bmi-color1);
+}
+
+.form-item input::placeholder{
+  font-weight: 500;
+}
+
+#appeal-offcanvas .form-submit-button{
+  background-color: var(--bmi-color4);
+}
+
+#appeal-offcanvas .form-submit-button:hover{
+  animation: ease infinite;
+  animation-name: submitbtn;
+  animation-duration: 0.9s;
+}
+
+@keyframes submitbtn{
+  0%{
+    box-shadow: 0 0 0 0 var(--bmi-color4);
+  }
+
+  80%{
+    box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+  }
+
+  100%{
+    box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+  }
+}
+
+#appeal-offcanvas .offcanvas-body::-webkit-scrollbar-thumb {
+  background: var(--bmi-color4);
+}
+
+#course-offcanvas h3{
+  color: var(--bmi-color1);
+  font-weight: 700;
+}
+
+#course-offcanvas .course-card-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#course-offcanvas .course-card{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 15px;
+margin-bottom: 20px;
+max-width: 320px;
+}
+
+#course-offcanvas .course-card .course-image{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#course-offcanvas .course-card .course-image img{
+  width: 100%;
+  max-width: 320px;
+  min-height: 200px;
+  object-fit: contain;
+}
+
+#course-offcanvas .course-card span{
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+#course-offcanvas .course-card:hover{
+  box-shadow: 0 0 5px 0 var(--bmi-color1);
+  transform: scale(1.05);
+  transition: all .3s;
 }
