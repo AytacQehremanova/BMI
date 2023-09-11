@@ -72,6 +72,14 @@ header .header {
   justify-content: center;
   flex-direction: column;
 }
+.top-navbar.fixed-top{
+  background-color: var(--bmi-color5);
+}
+@media only screen and (min-width: 992px){
+  .top-navbar.fixed-top{
+    display: none !important;
+  }
+}
 
 .header .top-navbar {
   width: 100%;
@@ -2829,4 +2837,8 @@ max-width: 320px;
   box-shadow: 0 0 5px 0 var(--bmi-color1);
   transform: scale(1.05);
   transition: all .3s;
+}
+
+.page-main-buttons .page-button.active {
+  transform: translateX(-140px);
 }
